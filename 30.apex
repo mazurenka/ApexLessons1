@@ -12,10 +12,10 @@ if(Math.mod(year, 4) == 0) {
     if(Math.mod(year, 100) == 0) {
         if(Math.mod(year, 400) == 0) {
             System.debug('Its a leap year');
-                } else {
+                                                                  } else {
                     System.debug('Not a  leap year');
                 }
-    } else {
+                                                                } else {
         System.debug('Its a leap year');
     }
 } else {
