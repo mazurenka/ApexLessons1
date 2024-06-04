@@ -1,16 +1,10 @@
-Integer current;
-Integer previous = 1;
-Integer beforePrevious = 0;
 
-System.debug(beforePrevious);
-System.debug(previous);
-
-Integer i = 0;
-
-while (i < 18) {
-    current = previous + beforePrevious;
-    System.debug(current);
-    beforePrevious = previous;
-    previous = current;
-    i++;
+for(Integer year = 1100; year <= 2000; year++) {
+    if(Math.mod(year, 4) == 0) {
+        if(Math.mod(year, 100) == 0) {
+            if(Math.mod(year, 400) == 0) {
+                System.debug(year + ' is a leap year');
+            }
+        } else {System.debug(year + ' is a leap year');}
+    }
 }
