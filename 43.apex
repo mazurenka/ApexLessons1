@@ -11,6 +11,8 @@ for(Integer i = 1; i <= n; i++) {
 }
 
 
+
+/*
 // list of all days
 List<String> days = new List<String>{'Mon', 'Tue', 'Wed', 'Tho', 'Fri', 'Sat', 'Sun'};
 
@@ -28,6 +30,18 @@ for(Integer i = 0; i < listSize; i++) {
     // multiple statement here
 
 }
+*/
+
+// list of all days
+List<String> days = new List<String>{'Mon', 'Tue', 'Wed', 'Tho', 'Fri', 'Sat', 'Sun'};
+
+for(String day : days) {
+    if(day == 'Tue') {
+        continue;
+    }
+    System.debug('It is ' +day+ ' Go to work.');
+}
+
 
 
 
