@@ -30,26 +30,48 @@ public class HelloWorld {
     public void printMessage(String msg) {
         System.debug(msg);
     }
+
+    public String getDay(Integer dayNumber) {
+
+        String dayString = '';
+        switch on dayNumber {
+            when 0 {
+                dayString = 'Sunday';
+            }
+            when 1 {
+                dayString = 'Mon';
+            }
+            when 2 {
+                dayString = 'Tue';
+            }
+            when 3 {
+                dayString = 'Wed';
+            }
+            when 4 {
+                dayString = 'Thu';
+            }
+            when 5 {
+                dayString = 'Fri';
+            }
+            when 6 {
+                dayString = 'Sat';
+            }
+            when else {
+                dayString = 'Invalid num of day';
+            }
+        }
+        return dayString ;
+    }
+
 }
 
 
-// init the class
 HelloWorld firstClass = new HelloWorld();
 
-// get an error for private variable
-// System.debug(firstClass.greeting);
-
-//firstClass.printGreeting();
-
-//firstClass.printGoodMorning();
-//firstClass.printGoodAfternoon();
-//firstClass.printGoodEvening();
-
-firstClass.printMessage('good morning');
-firstClass.printMessage('good morning');
-firstClass.printMessage('print generic message');
-
-//System.debug(firstClass.publicGreeting);
+System.debug(firstClass.getDay(0));
+System.debug(firstClass.getDay(3));
+System.debug(firstClass.getDay(6));
+System.debug(firstClass.getDay(10));
 
 
 
