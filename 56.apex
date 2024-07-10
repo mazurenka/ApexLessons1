@@ -20,4 +20,4 @@ System.debug('BMI Parameter Andre - ' + Fitness.calculatePace(5, 45));
 Decimal janeBMI = Fitness.calculateBMI(53, 1.64);
 System.debug('BMI Parameter Jane - ' + janeBMI);
 Decimal janePace = Fitness.calculatePace(5, 55);
-System.debug('BMI Parameter Jane - ' + janePace);
+System.debug('BMI Parameter Jane - ' +  janePace);
