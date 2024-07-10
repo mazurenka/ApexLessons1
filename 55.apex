@@ -1,3 +1,4 @@
+
 public class Friends {
 
     final Integer ONLY_ONE_SLICE = 8;
@@ -24,3 +25,5 @@ System.debug('Chandler has to pay - ' +chandlerHasToPay);
 
 Integer joeHasToPay = pizzaNight.getBill(4);
 System.debug('Joe has to pay - ' +joeHasToPay);
+
+
