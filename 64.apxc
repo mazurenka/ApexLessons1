@@ -5,8 +5,12 @@ public class Covid19 {
 
     // parameterized constructor to set class variables value
     public Covid19(Integer recoveredInArea) {
-        this.recoveredInArea = recoveredInArea;
-        recoveredInCountry += recoveredInArea;
+        if(recoveredInArea < 0) {
+            this.recoveredInArea = 0;
+        } else {
+       	 	this.recoveredInArea = recoveredInArea;
+        	recoveredInCountry += recoveredInArea;
+        }
     }
 
     public void treadPatient() {
@@ -47,4 +51,36 @@ public class Covid19Test {
         System.assert(treated == 11, 'Treated count does not match');
         System.assert(Covid19.recoveredInCountry == 126, 'Treated count does not match');
     }
+    
+    @isTest
+    public static void treadPatientTestNegative(){
+
+        // create the istance of the class
+        Covid19 warsaw = new Covid19(-10);
+
+        Integer treated = warsaw.getTreated();
+        //check if the count is 0 or not
+        System.assertEquals(0, treated, 'Treated count does not match');
+        
+       
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
