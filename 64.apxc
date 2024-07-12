@@ -1,0 +1,50 @@
+public class Covid19 {
+
+    private Integer recoveredInArea = 0;
+    public static Integer recoveredInCountry =0;
+
+    // parameterized constructor to set class variables value
+    public Covid19(Integer recoveredInArea) {
+        this.recoveredInArea = recoveredInArea;
+        recoveredInCountry += recoveredInArea;
+    }
+
+    public void treadPatient() {
+        recoveredInArea++;
+        recoveredInCountry++;
+    }
+
+    public Integer getTreated() {
+        return recoveredInArea;
+    }
+}
+
+@isTest
+public class Covid19Test {
+
+    @isTest
+    public static void treadPatientTest(){
+
+        // create the istance of the class
+        Covid19 warsaw = new Covid19(10);
+
+        Integer treated = warsaw.getTreated();
+        //check if the count is 10 or not
+        System.assertEquals(10, treated, 'Treated count does not match');
+        
+        // create the istance of the class
+        Covid19 cracow = new Covid19(115);
+
+        treated = cracow.getTreated();
+        //check if the count is 10 or not
+        System.assertEquals(115, treated, 'Treated count does not match');
+
+        //check the count of recoveredInCoutry, it should be 125
+         System.assertEquals(125, Covid19.recoveredInCountry, 'Treated count does not match');
+        
+        warsaw.treadPatient();
+		treated = warsaw.getTreated();
+        System.assert(treated == 11, 'Treated count does not match');
+        System.assert(Covid19.recoveredInCountry == 126, 'Treated count does not match');
+    }
+}
